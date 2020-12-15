@@ -1,0 +1,357 @@
+/* NAVIGATION */
+
+nav {
+	overflow: hidden;
+    float: left;
+    position: absolute;
+    height: 100%;
+	top: 0;
+    left: 0;
+	background: #181818;
+}
+
+nav ul {
+    text-align: center;
+	padding-left: 0px;
+}
+
+nav ul:hover {
+    text-align: center;
+	padding-left: 0px;
+}
+
+nav ul li {
+    list-style-type: none;
+    position: relative;
+    height: 90px;
+    width: 70px;
+    cursor: pointer;
+    background: #181818;
+    padding-inline-start: 0px;
+	text-transform: uppercase;
+	opacity: 1;
+	color: cyan;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+nav ul li:after {
+	position: absolute;
+	background: #181818;
+	color: #909096;
+	top: 0;
+	left: 70px;
+	width: 70px; height: 100%;
+	opacity: 0;
+	color: cyan;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+nav ul li:nth-child(1):after { 
+	content: "Home";
+	line-height: 88px;
+}
+nav ul li:nth-child(2):after { 
+	content: "About";
+	line-height: 88px;
+}
+nav ul li:nth-child(3):after { 
+	content: "Work";
+	line-height: 88px;
+}
+nav ul li:nth-child(4):after { 
+	content: "Contact";
+	line-height: 85px;
+	font-size: 12px;
+}
+nav ul li:nth-child(5):after { 
+	content: "Instagram";
+	line-height: 70px;
+	font-size: 10px;
+}
+nav ul li:nth-child(6):after { 
+	content: "LinkedIn";
+	line-height: 70px;
+	font-size: 12px;
+}
+nav ul li:nth-child(7):after { 
+	content: "GitHub";
+	line-height: 70px;
+}
+
+
+nav ul li:hover {
+	transform: translateX(-70px);
+}
+
+nav ul li:hover:after {
+  opacity: 1;
+	transform: perspective(400px) rotateY(0deg) scale(1) ;
+}
+
+nav ul li > div {
+	display: inline-block;
+	padding: 25px 0;
+	background: transparent;
+}
+
+nav ul li div { position: relative; }
+
+/* LOGO */
+
+.logo-icon {
+    padding: 10px 0 10px 0;
+}
+
+/* Home */
+
+.roof {
+	width: 0;
+	height: 0;
+	top:2px;
+	border-style: solid;
+	border-width: 0 21px 15px 21px;
+	border-color: transparent transparent #909096 transparent;
+}
+
+.roof-edge {
+	position: absolute;
+	z-index: 20;
+	left: -17px;
+	top: 3px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 17px 12px 17px;
+	border-color: transparent transparent #909096 transparent;
+}
+/* Triangle overlapping */
+.roof-edge:after {
+	position: absolute;
+	left: -14.5px;
+	top: 3px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 14.5px 10px 14.5px;
+	border-color: transparent transparent #909096 transparent;
+}
+
+.front {
+	position: relative;
+	top: 1px;
+	width: 28.5px;
+	height: 20px;
+	margin: 0 auto;
+	background: #909096;
+}
+/*door*/
+.front:after {
+	position: absolute;
+	background: #181818;
+	width: 11px;
+	height: 13px;
+	bottom: 0;
+	left:9px;
+}
+
+/* About */
+
+.head {
+	width: 17px;
+    height: 17px;
+    background: #909096;
+    border-radius: 10px;
+    margin-left: 5px;
+	margin-bottom: -2px;
+}
+
+.body {
+	border-radius: 15px 15px 8px 8px;
+    width: 28px;
+    height: 24px;
+    background: #909096;
+    margin-top: 3px;
+}
+
+.body:after {
+	width: 20px;
+	height: 20px;
+	background: #909096;
+	border-radius:10px;
+}
+
+/* Skills */
+
+.paper {
+	position: relative;
+	height:32px;
+	width: 29px;
+	background: #909096;
+	border:2px solid #909096;
+}
+
+/*window*/
+.paper:after {
+	position: absolute;
+	top:1px;
+	left: 0;
+	width: 25px;
+	height: 29px;
+	background: #909096;
+	border-top:4px solid #181818;
+}
+
+.lines {
+	position: absolute;
+	top: 36px;
+	left: 5px;
+	width: 11px;
+	box-shadow: 0 0 0 1px #181818;
+}
+
+.lines:after {
+	position: absolute;
+	top: 4px;
+	left: 3px;
+	width: 14px;
+	box-shadow: 0 0 0 1px #181818;
+}
+
+.lines:nth-child(2) {
+	position: absolute;
+	top: 44px;
+	left: 8px;
+	width: 11px;
+}
+
+.lines:nth-child(2):after {
+	position: absolute;
+	top: 4px;
+	left: -3px;
+	width: 11px;
+}
+
+.lines:nth-child(3) {
+	position: absolute;
+	top: 52px;
+	left: 8px;
+	width: 14px;
+}
+
+.lines:nth-child(3):after {
+	display: none;
+}
+
+/* Gallery */
+
+
+
+/* Contact */
+
+.mail-base {
+	position: relative;
+	width: 32px;
+	height: 18px;
+	background: #909096;
+}
+
+.mail-top {
+	position: absolute;
+	z-index: 20;
+	left: 0;
+	top: 0;
+	width: 0;
+	height: 0;
+	transform: rotate(180deg);
+	border-style: solid;
+	border-width: 0 16px 11px 16px;
+	border-color: transparent transparent #181818 transparent;
+}
+
+.mail-top:after {
+	position: absolute;
+	z-index: 20;
+	left: -16px;
+	top: 3px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 16px 9px 16px;
+	border-color: transparent transparent #909096 transparent;
+}
+
+/* MEDIA */
+
+nav ol {
+	text-align: center;
+	padding-left: 0px;
+}
+
+nav ol:hover {
+	text-align: center;
+	padding-left: 0px;
+}
+
+nav ol li {
+	list-style-type: none;
+    position: relative;
+    height: 90px;
+    width: 70px;
+    cursor: pointer;
+    background: #181818;
+    padding-inline-start: 0px;
+	text-transform: uppercase;
+	opacity: 1;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+nav ol li:hover {
+	position: absolute;
+	background: #181818;
+	color: #909096;
+	top: 0;
+	left: 70px;
+	width: 70px; height: 100%;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+
+
+.instagram {
+
+
+	
+}
+
+.instagram:after {
+
+}
+
+.github {
+
+}
+
+.github:after {
+
+}
+
+.linkedin {
+
+}
+
+.linkedin:after {
+
+}
+
+.newsfeed {
+
+}
+
+.newsfeed:after {
+
+}
